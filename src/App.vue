@@ -26,4 +26,23 @@ import CitySearch from './components/cities-search/CitySearch.vue';
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+
+.search-result {
+  background-color: rgb(97, 62, 252);
+  cursor: pointer;
+}
+
+.item {
+  width: 350px;
+  margin: 0 auto 10px auto;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.error {
+  background-color: tomato;
+}
 </style>

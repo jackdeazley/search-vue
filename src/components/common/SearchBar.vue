@@ -16,5 +16,5 @@ export default {
 </script>
 
 <style scoped>
-@import '../../assets/styling/search-bar-css';
+@import '../../assets/styling/search-bar.css';
 </style>

@@ -7,7 +7,7 @@
 
   <div class="search-results-container" v-if="bookStore.showFilteredData">
     <div
-      class="search-result"
+      class="search-result item"
       v-for="book in bookStore.filteredData"
       :key="book"
     >
@@ -35,10 +35,8 @@ const filterBooks = (searchInput) => {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-.search-result {
-  background-color: rgb(97, 62, 252);
-  cursor: pointer;
+<style scoped>
+.author {
+  font-size: 0.5rem;
 }
 </style>
