@@ -55,7 +55,13 @@ export const books = [
 ];
 
 export function filterData(dataToFilter, arrayProperty, searchedInput) {
-  return dataToFilter.filter((data) =>
-    data[arrayProperty].toLowerCase().includes(searchedInput.toLowerCase())
-  );
+  if (arrayProperty) {
+    return dataToFilter.filter((data) =>
+      data[arrayProperty].toLowerCase().includes(searchedInput.toLowerCase())
+    );
+  } else {
+    return dataToFilter.filter((data) =>
+      data.toLowerCase().includes(searchedInput.toLowerCase())
+    );
+  }
 }
