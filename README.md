@@ -10,9 +10,9 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### For running unit tests via Vitest
 ```
-npm run build
+npx vitest
 ```
 
 ### Lints and fixes files
