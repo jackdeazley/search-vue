@@ -1,21 +1,23 @@
 <template>
-  <SearchBar
-    placeholder-text="Search books here"
-    :search-model="bookStore.searchInput"
-    @on-search-data="filterBooks"
-  />
+  <div class="search-container">
+    <SearchBar
+      placeholder-text="Search books here"
+      :search-model="bookStore.searchInput"
+      @on-search-data="filterBooks"
+    />
 
-  <div class="search-results-container" v-if="bookStore.showFilteredData">
-    <div
-      class="search-result item"
-      v-for="book in bookStore.filteredData"
-      :key="book"
-    >
-      <p class="title">{{ book.title }}</p>
-      <p class="author">{{ book.author }}</p>
-    </div>
-    <div class="item error" v-if="bookStore.showError">
-      <p>No results found!</p>
+    <div class="search-results-container" v-if="bookStore.showFilteredData">
+      <div
+        class="search-result item"
+        v-for="book in bookStore.filteredData"
+        :key="book"
+      >
+        <p class="title">{{ book.title }}</p>
+        <p class="author">by {{ book.author }}</p>
+      </div>
+      <div class="item error" v-if="bookStore.showError">
+        <p>No results found!</p>
+      </div>
     </div>
   </div>
 </template>
@@ -35,6 +37,6 @@ const filterBooks = (searchInput) => {
 
 <style scoped>
 .author {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
 }
 </style>

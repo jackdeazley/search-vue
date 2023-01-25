@@ -1,5 +1,5 @@
 <template>
-  <div class="city-search">
+  <div class="search-container">
     <SearchBar
       placeholder-text="Search cities here"
       :search-model="cityStore.searchInput"

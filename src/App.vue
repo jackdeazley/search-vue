@@ -1,6 +1,10 @@
 <template>
-  <BookSearch />
-  <CitySearch />
+  <h1>Vue Search Challenge</h1>
+
+  <div class="search-boxes">
+    <BookSearch />
+    <CitySearch />
+  </div>
 </template>
 
 <script setup>
@@ -17,7 +21,10 @@ import CitySearch from './components/cities-search/CitySearch.vue';
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding-top: 60px;
+
+  background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+  height: 100vh;
 }
 
 * {
@@ -25,10 +32,22 @@ import CitySearch from './components/cities-search/CitySearch.vue';
   margin: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  color: #000;
 }
 
+h1 {
+  color: white;
+  margin-bottom: 40px;
+}
+.search-boxes {
+  display: flex;
+}
+.search-container {
+  flex: 1;
+}
 .search-result {
-  background-color: rgb(97, 62, 252);
+  background-color: rgb(255, 255, 255);
+  color: #000000;
   cursor: pointer;
 }
 
@@ -43,6 +62,10 @@ import CitySearch from './components/cities-search/CitySearch.vue';
 }
 
 .error {
-  background-color: tomato;
+  background: white;
+}
+
+.error p {
+  color: red;
 }
 </style>
