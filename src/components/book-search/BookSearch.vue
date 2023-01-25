@@ -27,8 +27,6 @@ import SearchBar from '../common/SearchBar.vue';
 
 const bookStore = useStore('books', MockData.books);
 
-// const cityStore = useStore('cities', MockData.cities);
-
 const filterBooks = (searchInput) => {
   bookStore.searchInput = searchInput;
   bookStore.filterData('title');
